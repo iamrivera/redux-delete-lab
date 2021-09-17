@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 
 class BandInput extends Component {
   state = {
-    bandName: ''
+    name: ''
   }
 
   handleOnChange = (event) => {
     this.setState({
-      bandName: event.target.value
+      name: event.target.value
     })
   }
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    this.props.addBand(this.state.bandName);
-    this.setState({ bandName: '' })
+    this.props.addBand(this.state.name);
+    this.setState({ name: '' })
   }
 
   render() {
@@ -25,7 +25,7 @@ class BandInput extends Component {
           <input 
             type="text"
             onChange={this.handleOnChange}
-            value={this.state.bandName}
+            value={this.state.name}
             />
         </form>
       </div>
